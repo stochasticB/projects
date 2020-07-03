@@ -9,7 +9,7 @@ wn.title('space invaders')
 
 # draw border
 border_pen = turtle.Turtle()
-border_pen.speed(2)
+border_pen.speed(0)
 border_pen.color('green')
 border_pen.penup()
 border_pen.setposition(-300, -300)
@@ -30,7 +30,21 @@ player.speed(0)
 player.setposition(0, -250)
 player.setheading(90)
 
-# https://www.youtube.com/watch?v=FdmjXnyoS0A
+playerspeed = 15
+
+# move the player left and right
+
+
+def move_left():
+    x = player.xcor()
+    x -= playerspeed
+    player.setx(x)
+
+#create keyboard bindings
+
+
+turtle.listen()
+turtle.onkey(move_left, "Left")
 
 
 
