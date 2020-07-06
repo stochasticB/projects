@@ -37,7 +37,7 @@ playerspeed = 15
 
 def move_left():
     x = player.xcor()
-    x -= playerspeed
+    x = x-playerspeed
     player.setx(x)
 
 #create keyboard bindings
